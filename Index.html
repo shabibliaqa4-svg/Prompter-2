@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Stacked Prompt Builder</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>🌟 Stacked Prompt Builder</h1>
+  <p>Build complex prompts easily. Fill in the fields below:</p>
+
+  <div class="form">
+    <label>Role (Persona):</label>
+    <input type="text" id="role" placeholder="e.g. You are a recruitment consultant...">
+
+    <label>Style:</label>
+    <textarea id="style" placeholder="Energetic, warm, concise..."></textarea>
+
+    <label>Tone:</label>
+    <textarea id="tone" placeholder="Assertive, professional, no exaggeration..."></textarea>
+
+    <label>Rules (Do’s & Don’ts):</label>
+    <textarea id="rules" placeholder="Do not give opinions or imply..."></textarea>
+
+    <label>Output Format:</label>
+    <textarea id="format" placeholder="3-5 options, job title + location + key detail..."></textarea>
+
+    <label>Variables (User input params):</label>
+    <input type="text" id="variable" placeholder="{Industry, Location, Role level}">
+
+    <button onclick="generateStaked()">📑 Generate Staked Prompt</button>
+    <button onclick="generateUnified()">📝 Generate Unified Prompt</button>
+    <button onclick="checkGrammar()">✅ Check Grammar/Clarity</button>
+  </div>
+
+  <h2>Generated Prompt:</h2>
+  <pre id="output"></pre>
+
+  <script src="script.js"></script>
+</body>
+</html>
